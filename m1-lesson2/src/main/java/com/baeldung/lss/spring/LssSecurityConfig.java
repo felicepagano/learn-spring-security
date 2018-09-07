@@ -15,7 +15,7 @@ public class LssSecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		auth
 		.inMemoryAuthentication()
-		.withUser("pippo").password("pluto")
+		.withUser("user").password("pass")
 		.roles("USER");
 		
 	} // @formatter:on
