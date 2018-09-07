@@ -12,6 +12,7 @@ import com.baeldung.lss.web.model.User;
 
 @SpringBootApplication
 @ComponentScan("com.baeldung.lss.web")
+@ComponentScan("com.baeldung.lss.spring.security")
 public class LssApp2 {
 
     @Bean
@@ -30,7 +31,7 @@ public class LssApp2 {
     }
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(LssApp2.class, args);
+        SpringApplication.run(new Class[] { LssApp2.class, LssSecurityConfig.class }, args);
     }
 
 }
