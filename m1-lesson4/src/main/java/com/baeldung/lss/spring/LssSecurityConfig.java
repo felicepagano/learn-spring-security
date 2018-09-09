@@ -31,7 +31,8 @@ public class LssSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
         
         .and()
-        .formLogin()
+        .formLogin().loginPage("/login").permitAll()
+        .loginProcessingUrl("/doLogin")
         ;
     } // @formatter:on
 
