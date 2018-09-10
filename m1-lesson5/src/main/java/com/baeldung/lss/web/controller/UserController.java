@@ -35,6 +35,7 @@ public class UserController {
     }
 
     @RequestMapping("{id}")
+    // spring automatically will call the String to User converter bean that will search the user id in the database.
     public ModelAndView view(@PathVariable("id") User user) {
         return new ModelAndView("users/view", "user", user);
     }
